@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: CustomTheme.theme,
+      title: 'Professional Profile - Azael Ortega',
       home: const ProfilePage(),
     );
   }

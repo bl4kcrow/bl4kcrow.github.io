@@ -1,11 +1,11 @@
 {
-    "name": "professional_profile_page",
-    "short_name": "professional_profile_page",
+    "name": "Professional Profile - Azael Ortega",
+    "short_name": "Professional Profile - Azael Ortega",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Professional profile describing my experience in IT - Azael Ortega",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
