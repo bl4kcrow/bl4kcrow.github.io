@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 import 'config/themes/custom_theme.dart';
 import 'pages/ui/profile_page.dart';
 
 void main() {
   runApp(const MyApp());
+  setUrlStrategy(PathUrlStrategy());
 }
 
 class MyApp extends StatelessWidget {
