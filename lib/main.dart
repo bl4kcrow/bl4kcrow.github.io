@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 import 'config/themes/custom_theme.dart';
-import 'config/utils/Custom_Scroll_Behavior.dart';
+import 'config/utils/custom_scroll_behavior.dart';
 import 'pages/ui/profile_page.dart';
 
 void main() {
