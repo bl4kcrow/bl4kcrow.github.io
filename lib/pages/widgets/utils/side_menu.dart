@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
-import '../../../business_logic/controllers/menu_controller.dart';
+import '../../../business_logic/controllers/page_menu_controller.dart';
 import '../../../config/constants/responsive_breakpoints.dart';
 import 'logo.dart';
 
@@ -11,7 +11,7 @@ class SideMenu extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
-  final MenuController _menuController = MenuController();
+  final PageMenuController _menuController = PageMenuController();
   final AutoScrollController autoScrollController;
 
   @override

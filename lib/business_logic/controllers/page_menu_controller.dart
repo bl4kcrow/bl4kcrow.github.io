@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MenuController {
+class PageMenuController {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   GlobalKey<ScaffoldState> get scaffoldKey => _scaffoldKey;
@@ -13,7 +13,8 @@ class MenuController {
       ];
 
   void openCloseDrawer() {
-    if (_scaffoldKey.currentState != null && _scaffoldKey.currentState!.isDrawerOpen) {
+    if (_scaffoldKey.currentState != null &&
+        _scaffoldKey.currentState!.isDrawerOpen) {
       _scaffoldKey.currentState?.openEndDrawer();
     } else {
       _scaffoldKey.currentState?.openDrawer();

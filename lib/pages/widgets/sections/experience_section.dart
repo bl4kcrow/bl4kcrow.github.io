@@ -34,7 +34,7 @@ class ExperienceCards extends StatelessWidget {
     const ExperienceItem(
       companyName: 'Globant',
       position: 'Specialist Engineer [Flutter Dev]',
-      period: '2021 - Now',
+      period: '2021 - 2023',
     ),
     const ExperienceItem(
       companyName: 'Rockers App, Coffee Blak, Epicx',

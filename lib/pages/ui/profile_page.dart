@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:sticky_headers/sticky_headers/widget.dart';
 
-import '/business_logic/controllers/menu_controller.dart';
 import '/config/constants/responsive_breakpoints.dart';
+import '../../business_logic/controllers/page_menu_controller.dart';
 import '../widgets/sections/contact_section.dart';
 import '../widgets/sections/experience_section.dart';
 import '../widgets/sections/footer.dart';
@@ -13,7 +13,7 @@ import '../widgets/sections/profile_info.dart';
 import '../widgets/sections/rockers_project_section.dart';
 import '../widgets/utils/max_width_container.dart';
 import '../widgets/utils/responsive_layout.dart';
-import '../widgets/utils/side_manu.dart';
+import '../widgets/utils/side_menu.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -24,7 +24,7 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilePage> {
   final AutoScrollController _autoScrollController = AutoScrollController();
-  final MenuController _menuController = MenuController();
+  final PageMenuController _menuController = PageMenuController();
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +65,7 @@ class MobileContent extends StatelessWidget {
   }) : super(key: key);
 
   final AutoScrollController autoScrollController;
-  final MenuController menuController;
+  final PageMenuController menuController;
 
   @override
   Widget build(BuildContext context) {
@@ -123,7 +123,7 @@ class TabletContent extends StatelessWidget {
   }) : super(key: key);
 
   final AutoScrollController autoScrollController;
-  final MenuController menuController;
+  final PageMenuController menuController;
 
   @override
   Widget build(BuildContext context) {
@@ -140,9 +140,9 @@ class TabletContent extends StatelessWidget {
             key: const ValueKey(0),
             controller: autoScrollController,
             index: 0,
-            child: Row(
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
+              children: [
                 ProfileImage(),
                 SizedBox(width: kSpaceBetweenSections * 2),
                 Expanded(child: ProfileInfo()),
@@ -186,7 +186,7 @@ class DesktopContent extends StatelessWidget {
   }) : super(key: key);
 
   final AutoScrollController autoScrollController;
-  final MenuController menuController;
+  final PageMenuController menuController;
 
   @override
   Widget build(BuildContext context) {
@@ -203,9 +203,9 @@ class DesktopContent extends StatelessWidget {
             key: const ValueKey(0),
             controller: autoScrollController,
             index: 0,
-            child: Row(
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
+              children: [
                 ProfileImage(),
                 SizedBox(width: kSpaceBetweenSections * 2),
                 Expanded(child: ProfileInfo()),

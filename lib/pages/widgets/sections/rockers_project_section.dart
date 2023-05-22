@@ -56,6 +56,54 @@ class RockersProjectSection extends StatelessWidget {
                       const SizedBox(
                         height: kDefaultPadding,
                       ),
+                      SvgPicture.asset('images/logos/tiktok-logo.svg'),
+                      const Text(
+                        'TikTok',
+                      ),
+                      const SizedBox(
+                        height: kDefaultPadding,
+                      ),
+                      ElevatedButton(
+                        onPressed: () async {
+                          const url =
+                              'https://www.tiktok.com/@rockersrockmusic';
+                          if (await canLaunchUrlString(
+                            url,
+                          )) {
+                            await launchUrlString(
+                              url,
+                            );
+                          } else {
+                            throw 'Could not launch $url';
+                          }
+                        },
+                        child: const Text(
+                          'Watch',
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Card(
+                child: Container(
+                  height: 220.0,
+                  width: 250.0,
+                  padding: const EdgeInsets.all(kDefaultPadding),
+                  child: Column(
+                    children: [
+                      const Text(
+                        'Rockers Rock Music Channel',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                        textScaleFactor: 1.2,
+                        textAlign: TextAlign.center,
+                        softWrap: true,
+                      ),
+                      const SizedBox(
+                        height: kDefaultPadding,
+                      ),
                       SvgPicture.asset('images/logos/youtube-logo.svg'),
                       const Text(
                         'YouTube',
@@ -65,7 +113,8 @@ class RockersProjectSection extends StatelessWidget {
                       ),
                       ElevatedButton(
                         onPressed: () async {
-                          const url = 'https://www.youtube.com/c/RockersRockMusic';
+                          const url =
+                              'https://www.youtube.com/c/RockersRockMusic';
                           if (await canLaunchUrlString(
                             url,
                           )) {

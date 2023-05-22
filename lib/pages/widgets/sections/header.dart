@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
-import '../../../business_logic/controllers/menu_controller.dart';
+import '../../../business_logic/controllers/page_menu_controller.dart';
 import '../../../config/constants/responsive_breakpoints.dart';
 import '../utils/bar_menu.dart';
 import '../utils/logo.dart';
@@ -15,7 +15,7 @@ class Header extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
-  final MenuController menuController;
+  final PageMenuController menuController;
   final AutoScrollController autoScrollController;
 
   @override
