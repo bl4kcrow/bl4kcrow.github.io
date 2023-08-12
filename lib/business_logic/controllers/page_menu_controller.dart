@@ -8,7 +8,7 @@ class PageMenuController {
   List<String> get menuItems => [
         'Home',
         'Experience',
-        'Rockers Project',
+        'Apps Projects',
         'Contact',
       ];
 

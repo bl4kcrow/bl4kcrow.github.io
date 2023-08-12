@@ -13,7 +13,7 @@ class RockersProjectSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         const Text(
-          'Rockers Rock Music Project',
+          'Apps Projects',
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),
@@ -23,8 +23,8 @@ class RockersProjectSection extends StatelessWidget {
           height: kDefaultPadding,
         ),
         Text(
-          'Spreading with passion the Rock sounds. '
-          'New and oldies rock songs, recommendations, charts from radio stations and magazines.',
+          'Rockers Rock Music Videos - Spreading with passion the Rock sounds. \n'
+          'PixelBlitz - A videogames library. ',
           softWrap: true,
           style: TextStyle(
             color: Theme.of(context).shadowColor,
@@ -37,6 +37,110 @@ class RockersProjectSection extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
+              Card(
+                child: Container(
+                  height: 220.0,
+                  width: 250.0,
+                  padding: const EdgeInsets.all(kDefaultPadding),
+                  child: Column(
+                    children: [
+                      const Text(
+                        'Rockers Rock Music Application',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                        textScaleFactor: 1.2,
+                        textAlign: TextAlign.center,
+                        softWrap: true,
+                      ),
+                      const SizedBox(
+                        height: kDefaultPadding,
+                      ),
+                      SvgPicture.asset(
+                        'images/logos/rockers-logo.svg',
+                        height: 45.0,
+                        width: 45.0,
+                      ),
+                      const Text(
+                        'Google Play Store',
+                      ),
+                      const SizedBox(
+                        height: kDefaultPadding,
+                      ),
+                      ElevatedButton(
+                        onPressed: () async {
+                          const url =
+                              'https://play.google.com/store/apps/details?id=com.bl4ckcrow.rockers';
+                          if (await canLaunchUrlString(
+                            url,
+                          )) {
+                            await launchUrlString(
+                              url,
+                            );
+                          } else {
+                            throw 'Could not launch $url';
+                          }
+                        },
+                        child: const Text(
+                          'Download',
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Card(
+                child: Container(
+                  height: 220.0,
+                  width: 250.0,
+                  padding: const EdgeInsets.all(kDefaultPadding),
+                  child: Column(
+                    children: [
+                      const Text(
+                        'PixelBlitz\nApplication',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                        textScaleFactor: 1.2,
+                        textAlign: TextAlign.center,
+                        softWrap: true,
+                      ),
+                      const SizedBox(
+                        height: kDefaultPadding,
+                      ),
+                      SvgPicture.asset(
+                        'images/logos/pixelblitz-logo.svg',
+                        height: 45.0,
+                        width: 45.0,
+                      ),
+                      const Text(
+                        'Google Play Store',
+                      ),
+                      const SizedBox(
+                        height: kDefaultPadding,
+                      ),
+                      ElevatedButton(
+                        onPressed: () async {
+                          const url =
+                              'https://play.google.com/store/apps/details?id=com.blakcrow.pixelblitz';
+                          if (await canLaunchUrlString(
+                            url,
+                          )) {
+                            await launchUrlString(
+                              url,
+                            );
+                          } else {
+                            throw 'Could not launch $url';
+                          }
+                        },
+                        child: const Text(
+                          'Download',
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
               Card(
                 child: Container(
                   height: 220.0,
@@ -127,56 +231,6 @@ class RockersProjectSection extends StatelessWidget {
                         },
                         child: const Text(
                           'Watch',
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              Card(
-                child: Container(
-                  height: 220.0,
-                  width: 250.0,
-                  padding: const EdgeInsets.all(kDefaultPadding),
-                  child: Column(
-                    children: [
-                      const Text(
-                        'Rockers Rock Music Application',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                        textScaleFactor: 1.2,
-                        textAlign: TextAlign.center,
-                        softWrap: true,
-                      ),
-                      const SizedBox(
-                        height: kDefaultPadding,
-                      ),
-                      SvgPicture.asset(
-                        'images/logos/google-play-logo.svg',
-                      ),
-                      const Text(
-                        'Google Play Store',
-                      ),
-                      const SizedBox(
-                        height: kDefaultPadding,
-                      ),
-                      ElevatedButton(
-                        onPressed: () async {
-                          const url =
-                              'https://play.google.com/store/apps/details?id=com.bl4ckcrow.rockers';
-                          if (await canLaunchUrlString(
-                            url,
-                          )) {
-                            await launchUrlString(
-                              url,
-                            );
-                          } else {
-                            throw 'Could not launch $url';
-                          }
-                        },
-                        child: const Text(
-                          'Download',
                         ),
                       )
                     ],
