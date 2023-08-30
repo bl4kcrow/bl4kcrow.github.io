@@ -42,24 +42,6 @@ class SocialButtons extends StatelessWidget {
             );
           },
         ),
-        NavButton(
-          iconID: FontAwesomeIcons.twitter,
-          tooltipText: 'Twitter',
-          onPressed: () async {
-            await _launchUrl(
-              'https://twitter.com/bl4kcrow',
-            );
-          },
-        ),
-        NavButton(
-          iconID: FontAwesomeIcons.instagram,
-          tooltipText: 'Instagram',
-          onPressed: () async {
-            await _launchUrl(
-              'https://www.instagram.com/bl4kcrow/',
-            );
-          },
-        ),
       ],
     );
   }
