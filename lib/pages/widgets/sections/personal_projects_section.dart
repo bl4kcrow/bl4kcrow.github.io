@@ -40,7 +40,7 @@ class PersonalProjectsSection extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(5.0),
                       child: Image.asset(
-                        'images/photos/pixelblitz-function-graph.png',
+                        'assets/images/photos/pixelblitz-function-graph.png',
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -105,7 +105,7 @@ class PersonalProjectsSection extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(5.0),
                       child: Image.asset(
-                        'images/photos/rockers-function-graph.png',
+                        'assets/images/photos/rockers-function-graph.png',
                         fit: BoxFit.cover,
                       ),
                     ),
