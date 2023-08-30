@@ -21,7 +21,7 @@ class ExperienceSection extends StatelessWidget {
         const SizedBox(
           height: kDefaultPadding,
         ),
-        ExperienceCards()
+        ExperienceCards(),
       ],
     );
   }

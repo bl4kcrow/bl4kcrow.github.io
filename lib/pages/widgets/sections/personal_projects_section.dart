@@ -273,7 +273,7 @@ class PersonalProjectsSection extends StatelessWidget {
                 _pixelBlitzProject(context),
               ],
             ),
-          )
+          ),
       ],
     );
   }

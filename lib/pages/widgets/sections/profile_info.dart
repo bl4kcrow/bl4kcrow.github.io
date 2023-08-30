@@ -46,7 +46,7 @@ class ProfileInfo extends StatelessWidget {
             SvgPicture.asset('images/logos/flutter-logo.svg'),
             SvgPicture.asset('images/logos/sap-logo.svg'),
           ],
-        )
+        ),
       ],
     );
   }

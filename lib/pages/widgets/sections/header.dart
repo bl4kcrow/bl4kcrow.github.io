@@ -35,7 +35,7 @@ class Header extends StatelessWidget {
           const Logo(),
           const Spacer(),
           if (ResponsiveLayout.isDesktopScreen(context) || ResponsiveLayout.isTabletScreen(context))
-            BarMenu(autoScrollController: autoScrollController)
+            BarMenu(autoScrollController: autoScrollController),
         ],
       ),
     );
