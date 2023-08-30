@@ -8,9 +8,9 @@ import '../widgets/sections/contact_section.dart';
 import '../widgets/sections/experience_section.dart';
 import '../widgets/sections/footer.dart';
 import '../widgets/sections/header.dart';
+import '../widgets/sections/personal_projects_section.dart';
 import '../widgets/sections/profile_image.dart';
 import '../widgets/sections/profile_info.dart';
-import '../widgets/sections/rockers_project_section.dart';
 import '../widgets/utils/max_width_container.dart';
 import '../widgets/utils/responsive_layout.dart';
 import '../widgets/utils/side_menu.dart';
@@ -98,7 +98,7 @@ class MobileContent extends StatelessWidget {
             key: const ValueKey(2),
             controller: autoScrollController,
             index: 2,
-            child: const RockersProjectSection(),
+            child: const PersonalProjectsSection(),
           ),
           const SizedBox(height: kSpaceBetweenSections),
           AutoScrollTag(
@@ -161,7 +161,7 @@ class TabletContent extends StatelessWidget {
             key: const ValueKey(2),
             controller: autoScrollController,
             index: 2,
-            child: const RockersProjectSection(),
+            child: const PersonalProjectsSection(),
           ),
           const SizedBox(height: kSpaceBetweenSections),
           AutoScrollTag(
@@ -224,7 +224,7 @@ class DesktopContent extends StatelessWidget {
             key: const ValueKey(2),
             controller: autoScrollController,
             index: 2,
-            child: const RockersProjectSection(),
+            child: const PersonalProjectsSection(),
           ),
           const SizedBox(height: kSpaceBetweenSections),
           AutoScrollTag(
