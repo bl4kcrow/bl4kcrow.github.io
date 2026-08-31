@@ -12,8 +12,8 @@ class Header extends StatelessWidget {
   const Header({
     required this.autoScrollController,
     required this.menuController,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final PageMenuController menuController;
   final AutoScrollController autoScrollController;
@@ -29,7 +29,7 @@ class Header extends StatelessWidget {
         children: <Widget>[
           if (ResponsiveLayout.isMobileScreen(context))
             IconButton(
-              icon: const Icon(FontAwesomeIcons.bars),
+              icon: const FaIcon(FontAwesomeIcons.bars),
               onPressed: menuController.openCloseDrawer,
             ),
           const Logo(),

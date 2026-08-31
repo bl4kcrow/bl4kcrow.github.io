@@ -5,7 +5,7 @@ import 'package:url_launcher/url_launcher_string.dart';
 import 'nav_button.dart';
 
 class SocialButtons extends StatelessWidget {
-  const SocialButtons({Key? key}) : super(key: key);
+  const SocialButtons({super.key});
 
   Future<void> _launchUrl(String url) async {
     if (await canLaunchUrlString(
@@ -25,7 +25,7 @@ class SocialButtons extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       children: [
         NavButton(
-          iconID: FontAwesomeIcons.linkedin,
+          iconWidget: FaIcon(FontAwesomeIcons.linkedin),
           tooltipText: 'Linkedin',
           onPressed: () async {
             await _launchUrl(
@@ -34,7 +34,7 @@ class SocialButtons extends StatelessWidget {
           },
         ),
         NavButton(
-          iconID: FontAwesomeIcons.github,
+          iconWidget: FaIcon(FontAwesomeIcons.github),
           tooltipText: 'GitHub',
           onPressed: () async {
             await _launchUrl(

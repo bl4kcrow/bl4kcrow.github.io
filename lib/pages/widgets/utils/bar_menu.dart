@@ -7,8 +7,8 @@ import '../../../config/constants/responsive_breakpoints.dart';
 class BarMenu extends StatelessWidget {
   BarMenu({
     required this.autoScrollController,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final PageMenuController _menuController = PageMenuController();
   final AutoScrollController autoScrollController;
@@ -31,8 +31,8 @@ class BarMenuItem extends StatefulWidget {
   const BarMenuItem({
     required this.title,
     required this.press,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final String title;
   final VoidCallback press;

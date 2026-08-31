@@ -12,14 +12,14 @@ class ProfileInfo extends StatelessWidget {
       children: <Widget>[
         Text(
           'Hello! my name is',
-          textScaleFactor: 2,
+          textScaler: TextScaler.linear(2.0),
           style: TextStyle(
             color: Theme.of(context).colorScheme.secondary,
           ),
         ),
         const Text(
           'Azael\nOrtega',
-          textScaleFactor: 5,
+          textScaler: TextScaler.linear(5.0),
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),
@@ -33,7 +33,7 @@ class ProfileInfo extends StatelessWidget {
           'I\'m also a SAP Abap Developer, with experience designing and '
           'programming SAP solutions for different industries & countries.',
           softWrap: true,
-          textScaleFactor: 1.5,
+          textScaler: TextScaler.linear(1.5),
           style: TextStyle(
             color: Theme.of(context).shadowColor,
           ),

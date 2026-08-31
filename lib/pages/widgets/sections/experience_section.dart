@@ -4,7 +4,7 @@ import '../../../business_logic/models/experience_item.dart';
 import '../../../config/constants/responsive_breakpoints.dart';
 
 class ExperienceSection extends StatelessWidget {
-  const ExperienceSection({Key? key}) : super(key: key);
+  const ExperienceSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class ExperienceSection extends StatelessWidget {
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),
-          textScaleFactor: 1.5,
+          textScaler: TextScaler.linear(1.5),
         ),
         const SizedBox(
           height: kDefaultPadding,
@@ -28,7 +28,7 @@ class ExperienceSection extends StatelessWidget {
 }
 
 class ExperienceCards extends StatelessWidget {
-  ExperienceCards({Key? key}) : super(key: key);
+  ExperienceCards({super.key});
 
   final List<ExperienceItem> experiences = [
     const ExperienceItem(
@@ -84,7 +84,7 @@ class ExperienceCards extends StatelessWidget {
                   ),
                   Text(
                     experiences[index].position,
-                    textScaleFactor: 1.2,
+                    textScaler: TextScaler.linear(1.2),
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.secondary,
                       fontWeight: FontWeight.bold,

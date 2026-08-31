@@ -5,8 +5,8 @@ import '../utils/social_buttons.dart';
 
 class ContactSection extends StatelessWidget {
   const ContactSection({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class ContactSection extends StatelessWidget {
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),
-          textScaleFactor: 1.5,
+          textScaler: TextScaler.linear(1.5),
         ),
         const SizedBox(
           height: kDefaultPadding,

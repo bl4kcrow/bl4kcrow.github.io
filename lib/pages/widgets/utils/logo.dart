@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Logo extends StatelessWidget {
-  const Logo({Key? key}) : super(key: key);
+  const Logo({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class Logo extends StatelessWidget {
       children: <Widget>[
         const Text(
           '</AO>',
-          textScaleFactor: 2,
+          textScaler: TextScaler.linear(2.0),
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         const SizedBox(

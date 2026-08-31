@@ -6,7 +6,7 @@ import '../../../config/constants/responsive_breakpoints.dart';
 import '../utils/responsive_layout.dart';
 
 class PersonalProjectsSection extends StatelessWidget {
-  const PersonalProjectsSection({Key? key}) : super(key: key);
+  const PersonalProjectsSection({super.key});
 
   Column _pixelBlitzProject(BuildContext context) {
     return Column(
@@ -148,7 +148,7 @@ class PersonalProjectsSection extends StatelessWidget {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
-                      textScaleFactor: 1.2,
+                      textScaler: TextScaler.linear(1.2),
                       textAlign: TextAlign.center,
                       softWrap: true,
                     ),
@@ -195,7 +195,7 @@ class PersonalProjectsSection extends StatelessWidget {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
-                      textScaleFactor: 1.2,
+                      textScaler: TextScaler.linear(1.2),
                       textAlign: TextAlign.center,
                       softWrap: true,
                     ),
@@ -247,7 +247,7 @@ class PersonalProjectsSection extends StatelessWidget {
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),
-          textScaleFactor: 1.5,
+          textScaler: TextScaler.linear(1.5),
         ),
         const SizedBox(
           height: kDefaultPadding,
