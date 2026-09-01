@@ -6,7 +6,7 @@ import '../../../config/constants/responsive_breakpoints.dart';
 import '../utils/responsive_layout.dart';
 
 class PersonalProjectsSection extends StatelessWidget {
-  const PersonalProjectsSection({Key? key}) : super(key: key);
+  const PersonalProjectsSection({super.key});
 
   Column _pixelBlitzProject(BuildContext context) {
     return Column(
@@ -82,7 +82,7 @@ class PersonalProjectsSection extends StatelessWidget {
             horizontal: kDefaultPadding / 2,
           ),
           child: Text(
-            'Rockers Rock Music App - Spreading with passion the Rock sounds.',
+            'Rockers Rock Music App - Spreading with passion the Rock & Metal sounds.',
             softWrap: true,
             style: TextStyle(
               color: Theme.of(context).shadowColor,
@@ -134,104 +134,52 @@ class PersonalProjectsSection extends StatelessWidget {
             ),
           ),
         ),
-        Row(
-          children: [
-            Card(
-              child: Container(
-                height: 220.0,
-                width: 250.0,
-                padding: const EdgeInsets.all(kDefaultPadding),
-                child: Column(
-                  children: [
-                    const Text(
-                      'Rockers TikTok Channel',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
-                      textScaleFactor: 1.2,
-                      textAlign: TextAlign.center,
-                      softWrap: true,
-                    ),
-                    const SizedBox(
-                      height: kDefaultPadding,
-                    ),
-                    SvgPicture.asset('images/logos/tiktok-logo.svg'),
-                    const Text(
-                      'TikTok',
-                    ),
-                    const SizedBox(
-                      height: kDefaultPadding,
-                    ),
-                    ElevatedButton(
-                      onPressed: () async {
-                        const url = 'https://www.tiktok.com/@rockersrockmusic';
-                        if (await canLaunchUrlString(
-                          url,
-                        )) {
-                          await launchUrlString(
-                            url,
-                          );
-                        } else {
-                          throw 'Could not launch $url';
-                        }
-                      },
-                      child: const Text(
-                        'Watch',
-                      ),
-                    ),
-                  ],
+        Card(
+          child: Container(
+            height: 220.0,
+            width: 250.0,
+            padding: const EdgeInsets.all(kDefaultPadding),
+            child: Column(
+              children: [
+                const Text(
+                  'Rockers TikTok Channel',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textScaler: TextScaler.linear(1.2),
+                  textAlign: TextAlign.center,
+                  softWrap: true,
                 ),
-              ),
-            ),
-            Card(
-              child: Container(
-                height: 220.0,
-                width: 250.0,
-                padding: const EdgeInsets.all(kDefaultPadding),
-                child: Column(
-                  children: [
-                    const Text(
-                      'Rockers YouTube Channel',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
-                      textScaleFactor: 1.2,
-                      textAlign: TextAlign.center,
-                      softWrap: true,
-                    ),
-                    const SizedBox(
-                      height: kDefaultPadding,
-                    ),
-                    SvgPicture.asset('images/logos/youtube-logo.svg'),
-                    const Text(
-                      'YouTube',
-                    ),
-                    const SizedBox(
-                      height: kDefaultPadding,
-                    ),
-                    ElevatedButton(
-                      onPressed: () async {
-                        const url =
-                            'https://www.youtube.com/c/RockersRockMusic';
-                        if (await canLaunchUrlString(
-                          url,
-                        )) {
-                          await launchUrlString(
-                            url,
-                          );
-                        } else {
-                          throw 'Could not launch $url';
-                        }
-                      },
-                      child: const Text(
-                        'Watch',
-                      ),
-                    ),
-                  ],
+                const SizedBox(
+                  height: kDefaultPadding,
                 ),
-              ),
+                SvgPicture.asset('images/logos/tiktok-logo.svg'),
+                const Text(
+                  'TikTok',
+                ),
+                const SizedBox(
+                  height: kDefaultPadding,
+                ),
+                ElevatedButton(
+                  onPressed: () async {
+                    const url = 'https://www.tiktok.com/@rockersrockmusic';
+                    if (await canLaunchUrlString(
+                      url,
+                    )) {
+                      await launchUrlString(
+                        url,
+                      );
+                    } else {
+                      throw 'Could not launch $url';
+                    }
+                  },
+                  child: const Text(
+                    'Watch',
+                  ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ],
     );
@@ -247,7 +195,7 @@ class PersonalProjectsSection extends StatelessWidget {
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),
-          textScaleFactor: 1.5,
+          textScaler: TextScaler.linear(1.5),
         ),
         const SizedBox(
           height: kDefaultPadding,

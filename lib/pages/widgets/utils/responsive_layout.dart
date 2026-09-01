@@ -5,10 +5,10 @@ import '../../../config/constants/responsive_breakpoints.dart';
 class ResponsiveLayout extends StatelessWidget {
   const ResponsiveLayout({
     required this.mobileScreen,
-    Key? key,
+    super.key,
     this.desktopScreen,
     this.tabletScreen,
-  }) : super(key: key);
+  });
 
   final Widget mobileScreen;
   final Widget? tabletScreen;

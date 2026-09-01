@@ -8,8 +8,8 @@ import 'logo.dart';
 class SideMenu extends StatelessWidget {
   SideMenu({
     required this.autoScrollController,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final PageMenuController _menuController = PageMenuController();
   final AutoScrollController autoScrollController;

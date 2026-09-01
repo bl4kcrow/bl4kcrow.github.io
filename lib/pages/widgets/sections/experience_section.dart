@@ -4,7 +4,7 @@ import '../../../business_logic/models/experience_item.dart';
 import '../../../config/constants/responsive_breakpoints.dart';
 
 class ExperienceSection extends StatelessWidget {
-  const ExperienceSection({Key? key}) : super(key: key);
+  const ExperienceSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class ExperienceSection extends StatelessWidget {
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),
-          textScaleFactor: 1.5,
+          textScaler: TextScaler.linear(1.5),
         ),
         const SizedBox(
           height: kDefaultPadding,
@@ -28,7 +28,9 @@ class ExperienceSection extends StatelessWidget {
 }
 
 class ExperienceCards extends StatelessWidget {
-  ExperienceCards({Key? key}) : super(key: key);
+  ExperienceCards({super.key});
+
+  final ScrollController _scrollController = ScrollController();
 
   final List<ExperienceItem> experiences = [
     const ExperienceItem(
@@ -65,35 +67,40 @@ class ExperienceCards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: List.generate(
-          experiences.length,
-          (index) => Card(
-            child: Container(
-              height: 180.0,
-              width: 250.0,
-              padding: const EdgeInsets.all(kDefaultPadding),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Text(
-                    experiences[index].companyName,
-                  ),
-                  Text(
-                    experiences[index].position,
-                    textScaleFactor: 1.2,
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.secondary,
-                      fontWeight: FontWeight.bold,
+    return Scrollbar(
+      controller: _scrollController,
+      trackVisibility: true,
+      child: SingleChildScrollView(
+        controller: _scrollController,
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: List.generate(
+            experiences.length,
+            (index) => Card(
+              child: Container(
+                height: 180.0,
+                width: 250.0,
+                padding: const EdgeInsets.all(kDefaultPadding),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text(
+                      experiences[index].companyName,
                     ),
-                  ),
-                  Text(
-                    experiences[index].period,
-                  ),
-                ],
+                    Text(
+                      experiences[index].position,
+                      textScaler: TextScaler.linear(1.2),
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.secondary,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      experiences[index].period,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

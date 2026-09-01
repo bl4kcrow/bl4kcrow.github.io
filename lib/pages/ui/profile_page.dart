@@ -16,7 +16,7 @@ import '../widgets/utils/responsive_layout.dart';
 import '../widgets/utils/side_menu.dart';
 
 class ProfilePage extends StatefulWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+  const ProfilePage({super.key});
 
   @override
   State<ProfilePage> createState() => _ProfilePageState();
@@ -61,8 +61,8 @@ class MobileContent extends StatelessWidget {
   const MobileContent({
     required this.autoScrollController,
     required this.menuController,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final AutoScrollController autoScrollController;
   final PageMenuController menuController;
@@ -119,8 +119,8 @@ class TabletContent extends StatelessWidget {
   const TabletContent({
     required this.autoScrollController,
     required this.menuController,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final AutoScrollController autoScrollController;
   final PageMenuController menuController;
@@ -182,8 +182,8 @@ class DesktopContent extends StatelessWidget {
   const DesktopContent({
     required this.autoScrollController,
     required this.menuController,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final AutoScrollController autoScrollController;
   final PageMenuController menuController;
