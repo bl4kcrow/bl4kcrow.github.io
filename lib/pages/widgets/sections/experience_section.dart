@@ -30,6 +30,8 @@ class ExperienceSection extends StatelessWidget {
 class ExperienceCards extends StatelessWidget {
   ExperienceCards({super.key});
 
+  final ScrollController _scrollController = ScrollController();
+
   final List<ExperienceItem> experiences = [
     const ExperienceItem(
       companyName: 'Globant',
@@ -65,35 +67,40 @@ class ExperienceCards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: List.generate(
-          experiences.length,
-          (index) => Card(
-            child: Container(
-              height: 180.0,
-              width: 250.0,
-              padding: const EdgeInsets.all(kDefaultPadding),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Text(
-                    experiences[index].companyName,
-                  ),
-                  Text(
-                    experiences[index].position,
-                    textScaler: TextScaler.linear(1.2),
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.secondary,
-                      fontWeight: FontWeight.bold,
+    return Scrollbar(
+      controller: _scrollController,
+      trackVisibility: true,
+      child: SingleChildScrollView(
+        controller: _scrollController,
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: List.generate(
+            experiences.length,
+            (index) => Card(
+              child: Container(
+                height: 180.0,
+                width: 250.0,
+                padding: const EdgeInsets.all(kDefaultPadding),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text(
+                      experiences[index].companyName,
                     ),
-                  ),
-                  Text(
-                    experiences[index].period,
-                  ),
-                ],
+                    Text(
+                      experiences[index].position,
+                      textScaler: TextScaler.linear(1.2),
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.secondary,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      experiences[index].period,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

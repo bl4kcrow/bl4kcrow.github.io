@@ -14,8 +14,12 @@ class ProfileImage extends StatelessWidget {
       width: ResponsiveLayout.isMobileScreen(context)
           ? MediaQuery.of(context).size.height * 0.25
           : MediaQuery.of(context).size.width * 0.25,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         backgroundBlendMode: BlendMode.luminosity,
+        border: Border.all(
+          color: Colors.white, // Border color
+          width: 3.0, // Border width
+        ),
         color: Colors.white,
         shape: BoxShape.circle,
         image: DecorationImage(
